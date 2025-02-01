@@ -6,7 +6,6 @@ const AddDetailsPage = () => {
     date: '',
     technicianName: '',
     customerName: '',
-    amount: '',
     mobileNumber: '',
     address: '',
     description: '',
@@ -59,7 +58,6 @@ const handleSubmit = async (e) => {
           description: formData.description,
           address: formData.address,
           mobileNumber: formData.mobileNumber,
-          amount: formData.amount,
           customerName: formData.customerName,
           technicianName: formData.technicianName,
           date: formData.date,
@@ -71,7 +69,6 @@ const handleSubmit = async (e) => {
           date: '',
           technicianName: '',
           customerName: '',
-          amount: '',
           mobileNumber: '',
           address: '',
           description: '',
@@ -131,17 +128,6 @@ const handleSubmit = async (e) => {
           />
         </div>
 
-        <div style={styles.inputGroup}>
-          <label style={styles.label}>Amount / مبلغ</label>
-          <input
-            type="number"
-            name="amount"
-            value={formData.amount}
-            onChange={handleInputChange}
-            style={styles.input}
-            required
-          />
-        </div>
         <div style={styles.inputGroup}>
   <label style={styles.label}>Mobile Number / رقم الجوال</label>
   <input
