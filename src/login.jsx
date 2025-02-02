@@ -5,9 +5,7 @@ const LoginPage = () => {
   // Mock data: predefined usernames and passwords
   const mockData = [
     { username: 'sabica', password: 'sabica@123' },
-    { username: 'Alshuhada', password: 'Adminpass' },
-    { username: 'user3', password: 'password3' },
-    { username: 'user4', password: 'password4' },
+    { username: 'Admin', password: 'Adminpass' },
   ];
 
   const [username, setUsername] = useState('');
