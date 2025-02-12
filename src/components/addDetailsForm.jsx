@@ -163,21 +163,18 @@ const handleSubmit = async (e) => {
           />
         </div>
         <div style={styles.inputGroup}>
-          <label style={styles.label}>Description / وصف</label>
-          <select
-            name="description"
-            value={formData.description}
-            onChange={handleInputChange}
-            style={errors.description ? styles.inputError : styles.input}
-          >
-            <option value="" disabled>
-              Select status
-            </option>
-            <option value="delivery">Delivery / توصيل</option>
-            <option value="Completed">Completed / مكتمل</option>
-          </select>
-          {errors.description && <span style={styles.errorText}>{errors.description}</span>}
-        </div>
+       <label style={styles.label}>Description / وصف</label>
+       <textarea
+       name="description"
+       value={formData.description}
+       onChange={handleInputChange}
+       style={styles.textarea}
+       required
+      />
+      {errors.description && (
+        <span style={styles.errorText}>{errors.description}</span>
+      )}
+    </div>
 
         <button type="submit" style={styles.button}>Save / أنقذ
         </button>
@@ -256,7 +253,7 @@ const styles = {
     border: '1px solid #ddd',
     fontSize: '16px',
     color: '#333',
-    height: '120px',
+    height: '70px',
     resize: 'vertical',
     transition: 'border 0.3s',
   },
